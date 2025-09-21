@@ -4,7 +4,7 @@ from telegram.ext import ContextTypes
 from telegram.error import BadRequest
 
 # Replace with your channel/group usernames
-REQUIRED_CHANNELS = ["@hitek111","@hitek111"]
+REQUIRED_CHANNELS = ["@loottoon","@Roy_726i"]
 
 async def check_membership(update: Update, context: ContextTypes.DEFAULT_TYPE) -> bool:
     """Check if the user is a member of required channels/groups"""
@@ -27,8 +27,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not await check_membership(update, context):
         keyboard = [
             [
-                InlineKeyboardButton("📌 Join Group", url="https://t.me/hitek111"),
-                InlineKeyboardButton("📢 Join Channel", url="https://t.me/hitek111"),
+                InlineKeyboardButton("📌 Join Group", url="https://t.me/loottoon"),
+                InlineKeyboardButton("📢 Join Channel", url="https://t.me/Roy_726i"),
             ]
         ]
         reply_markup = InlineKeyboardMarkup(keyboard)
